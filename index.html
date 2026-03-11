@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///C:/Users/mblasco/Downloads/roadtrip-hail_6.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Road Trip Ha'il · Marzo 2026</title>
+<link href="./Road Trip Ha&#39;il · Marzo 2026_files/css2" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --ink: #0f0a05; --sand: #d4a96a; --clay: #b56c3a;
+  --cream: #f2e8d4; --ash: #8a7a68; --card: #1c1208;
+}
+body { background: var(--ink); color: var(--cream); font-family: 'Playfair Display', serif; }
+
+/* ── HERO ── */
+.hero {
+  height: 100vh; min-height: 600px;
+  position: relative; display: flex; align-items: flex-end; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  /* Dunas rojas Nafud – Arabia Saudí */
+  background-image: url('https://images.unsplash.com/photo-1547234935-80c7145ec969?w=1800&q=90');
+  background-size: cover; background-position: center 50%;
+  filter: brightness(0.45) saturate(0.85);
+}
+.hero-grad {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, var(--ink) 0%, rgba(15,10,5,0.2) 55%, transparent 100%);
+}
+.hero-content { position: relative; z-index: 2; padding: 5rem 4rem; max-width: 820px; }
+.hero-tag {
+  font-family: 'DM Mono', monospace; font-size: .75rem;
+  letter-spacing: .38em; color: var(--sand); text-transform: uppercase; margin-bottom: 1.2rem;
+}
+.hero-title {
+  font-size: clamp(4rem, 10vw, 7.5rem); font-weight: 400;
+  line-height: .93; color: var(--cream); margin-bottom: 1.4rem;
+}
+.hero-title em { font-style: italic; color: var(--sand); }
+.hero-sub { font-size: 1.3rem; color: var(--ash); line-height: 1.55; max-width: 500px; }
+.pills { display: flex; gap: .7rem; flex-wrap: wrap; margin-top: 2.2rem; }
+.pill {
+  font-family: 'DM Mono', monospace; font-size: .66rem;
+  letter-spacing: .2em; text-transform: uppercase;
+  border: 1px solid rgba(212,169,106,.5); color: var(--sand); padding: .45rem 1rem;
+}
+
+/* ── STATS BAR ── */
+.stats { background: var(--clay); display: flex; justify-content: center; flex-wrap: wrap; }
+.stat {
+  padding: 1.3rem 2.5rem; text-align: center;
+  border-right: 1px solid rgba(255,255,255,.15); flex: 1; min-width: 110px;
+}
+.stat:last-child { border-right: none; }
+.stat-n { font-size: 2rem; font-weight: 700; color: var(--cream); line-height: 1; }
+.stat-l {
+  font-family: 'DM Mono', monospace; font-size: .54rem;
+  letter-spacing: .22em; color: rgba(255,255,255,.65); text-transform: uppercase; margin-top: .25rem;
+}
+
+/* ── ROUTE ── */
+.route-wrap { padding: 4rem 2.5rem 2.5rem; max-width: 900px; margin: 0 auto; }
+.section-tag {
+  font-family: 'DM Mono', monospace; font-size: .64rem;
+  letter-spacing: .42em; color: var(--clay); text-transform: uppercase; margin-bottom: 2rem;
+}
+.route { display: flex; align-items: center; overflow-x: auto; padding-bottom: .6rem; }
+.rnode { display: flex; flex-direction: column; align-items: center; min-width: 90px; }
+.rdot { width: 12px; height: 12px; border-radius: 50%; background: var(--clay); border: 2px solid var(--sand); }
+.rdot.home { background: var(--sand); width: 15px; height: 15px; }
+.rname { font-family: 'DM Mono', monospace; font-size: .56rem; letter-spacing: .1em; color: var(--cream); margin-top: .5rem; text-align: center; }
+.rleg { flex: 1; min-width: 50px; position: relative; top: -6px; }
+.rleg-line { height: 1px; background: linear-gradient(to right, rgba(181,108,58,.8), rgba(181,108,58,.3), rgba(181,108,58,.8)); }
+.rleg-label { font-family: 'DM Mono', monospace; font-size: .48rem; color: var(--ash); text-align: center; margin-top: 3px; white-space: nowrap; }
+
+/* ── MAP SECTION ── */
+.map-section { padding: 0 2.5rem 4.5rem; max-width: 900px; margin: 0 auto; }
+.map-widget {
+  border: 1px solid rgba(181,108,58,.2); overflow: hidden;
+  display: grid; grid-template-columns: 280px 1fr;
+  min-height: 540px;
+}
+/* Day tabs sidebar */
+.map-sidebar {
+  background: var(--card); border-right: 1px solid rgba(181,108,58,.15);
+  display: flex; flex-direction: column; overflow-y: auto;
+}
+.map-sidebar-header {
+  padding: 1.4rem 1.5rem 1rem;
+  border-bottom: 1px solid rgba(181,108,58,.12);
+}
+.map-sidebar-header p {
+  font-family: 'DM Mono', monospace; font-size: .5rem;
+  letter-spacing: .35em; color: var(--clay); text-transform: uppercase;
+}
+.map-sidebar-header h3 { font-size: 1.15rem; color: var(--cream); font-weight: 400; margin-top: .3rem; }
+.day-tab {
+  padding: 1.1rem 1.5rem; cursor: pointer;
+  border-bottom: 1px solid rgba(181,108,58,.08);
+  border-left: 3px solid transparent;
+  transition: all .2s ease;
+}
+.day-tab:hover { background: rgba(181,108,58,.06); border-left-color: rgba(181,108,58,.4); }
+.day-tab.active { background: rgba(181,108,58,.1); border-left-color: var(--clay); }
+.day-tab-num {
+  font-family: 'DM Mono', monospace; font-size: .48rem;
+  letter-spacing: .3em; color: var(--clay); text-transform: uppercase; margin-bottom: .3rem;
+}
+.day-tab.active .day-tab-num { color: var(--sand); }
+.day-tab-title { font-size: 1rem; color: var(--cream); font-weight: 400; line-height: 1.25; }
+.day-tab-drive {
+  font-family: 'DM Mono', monospace; font-size: .46rem;
+  color: var(--ash); margin-top: .35rem; letter-spacing: .1em;
+}
+/* Stops list inside active tab */
+.day-tab-stops { display: none; margin-top: .7rem; }
+.day-tab.active .day-tab-stops { display: block; }
+.stop-item {
+  display: flex; align-items: flex-start; gap: .5rem;
+  padding: .4rem 0;
+}
+.stop-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--clay); border: 1px solid var(--sand);
+  margin-top: .35rem; flex-shrink: 0;
+}
+.stop-dot.main { background: var(--sand); width: 9px; height: 9px; margin-top: .25rem; }
+.stop-name { font-family: 'DM Mono', monospace; font-size: .5rem; color: var(--ash); letter-spacing: .05em; line-height: 1.5; }
+.stop-time { font-size: .48rem; color: rgba(138,122,104,.6); }
+/* Map iframe panel */
+.map-panel { position: relative; }
+.map-panel iframe { width: 100%; height: 100%; border: none; display: block; min-height: 540px; }
+.map-day-label {
+  position: absolute; top: 1rem; right: 1rem; z-index: 10;
+  background: rgba(15,10,5,.82); border: 1px solid rgba(181,108,58,.4);
+  padding: .5rem 1rem; backdrop-filter: blur(6px);
+  font-family: 'DM Mono', monospace; font-size: .52rem;
+  letter-spacing: .2em; color: var(--sand); text-transform: uppercase;
+  pointer-events: none;
+}
+@media (max-width: 680px) {
+  .map-widget { grid-template-columns: 1fr; }
+  .map-sidebar { flex-direction: row; overflow-x: auto; overflow-y: hidden; border-right: none; border-bottom: 1px solid rgba(181,108,58,.15); }
+  .map-sidebar-header { display: none; }
+  .day-tab { min-width: 140px; border-left: none; border-bottom: 3px solid transparent; border-top: 3px solid transparent; }
+  .day-tab.active { border-left-color: transparent; border-top-color: var(--clay); }
+  .day-tab-stops { display: none !important; }
+  .map-panel iframe { min-height: 380px; }
+}
+
+/* ── DAY CARDS ── */
+.days { padding: 2rem 2.5rem 1rem; max-width: 900px; margin: 0 auto; }
+.days-h { font-size: 2.6rem; font-weight: 400; color: var(--sand); margin-bottom: 2rem; padding-bottom: .9rem; border-bottom: 1px solid rgba(181,108,58,.22); }
+.day { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 3px; min-height: 340px; overflow: hidden; }
+.day:nth-child(even) .di { order: 2; }
+.day:nth-child(even) .dt { order: 1; }
+.di { position: relative; overflow: hidden; background: #111; }
+.di img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(.72) brightness(.84); transition: transform .55s ease, filter .55s ease; }
+.day:hover .di img { transform: scale(1.05); filter: saturate(1) brightness(.95); }
+.dnum {
+  position: absolute; top: 1.1rem; left: 1.1rem;
+  font-family: 'DM Mono', monospace; font-size: .58rem;
+  letter-spacing: .22em; color: var(--cream);
+  background: rgba(15,10,5,.72); padding: .38rem .68rem;
+  backdrop-filter: blur(6px);
+}
+.dt {
+  background: var(--card); padding: 2.5rem 2.2rem;
+  display: flex; flex-direction: column; justify-content: center;
+  border: 1px solid rgba(181,108,58,.1);
+}
+.ddate { font-family: 'DM Mono', monospace; font-size: .6rem; letter-spacing: .28em; color: var(--clay); text-transform: uppercase; margin-bottom: .8rem; }
+.dtitle { font-size: 1.9rem; font-weight: 400; line-height: 1.15; color: var(--cream); margin-bottom: 1rem; }
+.dtitle em { font-style: italic; color: var(--sand); }
+.dbody { font-size: 1.08rem; line-height: 1.78; color: var(--ash); margin-bottom: 1.3rem; }
+.tags { display: flex; flex-wrap: wrap; gap: .45rem; }
+.tag { font-family: 'DM Mono', monospace; font-size: .54rem; letter-spacing: .12em; color: var(--clay); border: 1px solid rgba(181,108,58,.32); padding: .28rem .65rem; text-transform: uppercase; }
+
+/* ── FEATURE BANNER (Jubbah) ── */
+.feature {
+  position: relative; overflow: hidden;
+  min-height: 520px; display: flex; align-items: center; justify-content: center;
+  text-align: center; margin: 3px 0;
+}
+.fbg {
+  position: absolute; inset: 0;
+  /* Jubbah petroglifos reales – Google Places */
+  background-image: url('https://lh3.googleusercontent.com/place-photos/AL8-SNFKr5rN81q23TbzOkuQraOr58CI1uBNPBvWDD6syOF42QX21rusHkD1zIws-p2yYHzgkjAZbk645S-rdp9Vl5qQ5OhiJIVdLZ4w7rvFYa5eqAm3f30ROIf0pM2TadhUD55W7zJnjGEP0bad77U=s4800-w800-h600');
+  background-size: cover; background-position: center;
+  filter: brightness(.28) saturate(.6);
+}
+.fgrad {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(181,108,58,.15) 0%, rgba(15,10,5,.6) 100%);
+}
+.fcontent { position: relative; z-index: 2; padding: 5rem 2rem; max-width: 640px; }
+.feyebrow { font-family: 'DM Mono', monospace; font-size: .66rem; letter-spacing: .5em; color: var(--clay); text-transform: uppercase; margin-bottom: 1.6rem; }
+.ftitle { font-size: clamp(2.6rem, 5.5vw, 4.2rem); font-weight: 400; line-height: 1.05; color: var(--cream); margin-bottom: 1.3rem; }
+.ftitle em { font-style: italic; color: var(--sand); }
+.fquote { font-size: 1.12rem; line-height: 1.78; color: var(--ash); margin-bottom: 2.2rem; }
+.fbadge { display: inline-block; border: 1px solid var(--clay); color: var(--sand); font-family: 'DM Mono', monospace; font-size: .64rem; letter-spacing: .22em; text-transform: uppercase; padding: .75rem 1.6rem; }
+
+/* ── PHOTO STRIP ── */
+.strip { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 260px 260px; gap: 3px; margin: 3px 0; }
+.si { position: relative; overflow: hidden; background: #111; }
+.si.tall { grid-row: span 2; }
+.si img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(.65) brightness(.78); transition: all .45s ease; }
+.si:hover img { filter: saturate(1) brightness(.95); transform: scale(1.04); }
+.scap {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(15,10,5,.92), transparent);
+  padding: 1.1rem .9rem .75rem;
+  font-family: 'DM Mono', monospace; font-size: .54rem;
+  letter-spacing: .18em; color: var(--cream); text-transform: uppercase;
+  opacity: 0; transition: opacity .3s ease;
+}
+.si:hover .scap { opacity: 1; }
+
+/* ── NOTES ── */
+.notes-wrap { padding: 4.5rem 2.5rem 5rem; max-width: 900px; margin: 0 auto; }
+.notes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-top: 1.8rem; }
+.note { border-left: 2px solid rgba(181,108,58,.4); padding-left: 1.3rem; }
+.note-icon { font-size: 1.5rem; margin-bottom: .55rem; }
+.note h4 { font-size: 1.2rem; color: var(--sand); font-weight: 400; margin-bottom: .45rem; }
+.note p { font-size: 1rem; line-height: 1.72; color: var(--ash); }
+
+/* ── FOOTER ── */
+footer { border-top: 1px solid rgba(181,108,58,.15); padding: 3.5rem 2rem; text-align: center; }
+.footer-big { font-size: 6rem; font-weight: 700; letter-spacing: .5em; color: rgba(181,108,58,.1); line-height: 1; margin-bottom: .9rem; }
+footer p { font-family: 'DM Mono', monospace; font-size: .6rem; letter-spacing: .32em; color: var(--ash); text-transform: uppercase; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 680px) {
+  .day { grid-template-columns: 1fr; }
+  .day:nth-child(even) .di, .day:nth-child(even) .dt { order: unset; }
+  .di { min-height: 240px; }
+  .notes { grid-template-columns: 1fr; }
+  .strip { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 190px); }
+  .si.tall { grid-row: span 1; }
+  .hero-content { padding: 3.5rem 2rem; }
+  .map-embed { height: 380px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     HERO — Dunas rojas del Gran Nafud, Arabia Saudí
+     ═══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grad"></div>
+  <div class="hero-content">
+    <p class="hero-tag">Road Trip · Arabia Saudí · Marzo 2026</p>
+    <h1 class="hero-title">Al norte<br>del <em>desierto</em></h1>
+    <p class="hero-sub">Jubail → Buraydah → Ha'il<br>Volcanes, dunas rojas y petroglifos de 10.000 años</p>
+    <div class="pills">
+      <span class="pill">18 – 24 Mar</span>
+      <span class="pill">6 noches</span>
+      <span class="pill">~1.500 km</span>
+      <span class="pill">2 × UNESCO</span>
+      <span class="pill">0 vuelos</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ STATS ═══════════ -->
+<div class="stats">
+  <div class="stat"><div class="stat-n">6</div><div class="stat-l">Noches</div></div>
+  <div class="stat"><div class="stat-n">≤5h</div><div class="stat-l">Máx/día</div></div>
+  <div class="stat"><div class="stat-n">2</div><div class="stat-l">UNESCO</div></div>
+  <div class="stat"><div class="stat-n">10k</div><div class="stat-l">Años histor.</div></div>
+  <div class="stat"><div class="stat-n">0</div><div class="stat-l">Vuelos</div></div>
+</div>
+
+<!-- ═══════════ ROUTE LINE ═══════════ -->
+<div class="route-wrap">
+  <p class="section-tag">— Ruta completa</p>
+  <div class="route">
+    <div class="rnode"><div class="rdot home"></div><div class="rname">JUBAIL</div></div>
+    <div class="rleg"><div class="rleg-line"></div><div class="rleg-label">5h · D1</div></div>
+    <div class="rnode"><div class="rdot"></div><div class="rname">BURAYDAH</div></div>
+    <div class="rleg"><div class="rleg-line"></div><div class="rleg-label">2.5h · D3</div></div>
+    <div class="rnode"><div class="rdot"></div><div class="rname">HA'IL</div></div>
+    <div class="rleg"><div class="rleg-line"></div><div class="rleg-label">1h · D4</div></div>
+    <div class="rnode"><div class="rdot"></div><div class="rname">JUBBAH</div></div>
+    <div class="rleg"><div class="rleg-line"></div><div class="rleg-label">7.5h · D6</div></div>
+    <div class="rnode"><div class="rdot home"></div><div class="rname">JUBAIL</div></div>
+  </div>
+</div>
+
+<!-- ═══════════ MAPA INTERACTIVO POR DÍAS ═══════════ -->
+<div class="map-section">
+  <p class="section-tag">— Mapa del itinerario</p>
+  <div class="map-widget">
+
+    <!-- SIDEBAR: tabs por día -->
+    <div class="map-sidebar">
+      <div class="map-sidebar-header">
+        <p>18 – 24 Marzo 2026</p>
+        <h3>6 días · 4 destinos</h3>
+      </div>
+
+      <div class="day-tab" onclick="switchDay(0)">
+        <div class="day-tab-num">Día 1 · Mar 18</div>
+        <div class="day-tab-title">Jubail → Buraydah</div>
+        <div class="day-tab-drive">⏱ 5h conducción</div>
+        <div class="day-tab-stops">
+          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Al Jubail<div class="stop-time">Salida 8:00h</div></div></div>
+          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Buraydah<div class="stop-time">Llegada ~13:00h</div></div></div>
+          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Souq Al Musawkaf<div class="stop-time">Noche tras iftar</div></div></div>
+        </div>
+      </div>
+
+      <div class="day-tab" onclick="switchDay(1)">
+        <div class="day-tab-num">Día 2 · Mar 19</div>
+        <div class="day-tab-title">Buraydah</div>
+        <div class="day-tab-drive">⏱ Sin conducción</div>
+        <div class="day-tab-stops">
+          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Camel &amp; Cattle Market<div class="stop-time">6:30h · Alba</div></div></div>
+          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Uyun Al-Jiwa<div class="stop-time">Tarde · Oasis histórico</div></div></div>
+        </div>
+      </div>
+
+      <div class="day-tab active" onclick="switchDay(2)">
+        <div class="day-tab-num">Día 3 · Mar 20</div>
+        <div class="day-tab-title">Buraydah → Ha'il</div>
+        <div class="day-tab-drive">⏱ 2.5h conducción</div>
+        <div class="day-tab-stops">
+          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Qishlah Palace<div class="stop-time">Tarde · 142 habitaciones</div></div></div>
+          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">A'arif Fort<div class="stop-time">S.XVII · Vistas panorámicas</div></div></div>
+        </div>
+      </div>
+
+      <div class="day-tab" onclick="switchDay(3)">
+        <div class="day-tab-num">Día 4 · Mar 21</div>
+        <div class="day-tab-title">Excursión Jubbah</div>
+        <div class="day-tab-drive">⏱ 2h ida/vuelta · UNESCO ★</div>
+        <div class="day-tab-stops">
+          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Jubbah Petroglyphs<div class="stop-time">9:00h · 15.000 grabados</div></div></div>
+          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Gran Nafud<div class="stop-time">Tarde · Dunas al atardecer</div></div></div>
+        </div>
+      </div>
+
+      <div class="day-tab" onclick="switchDay(4)">
+        <div class="day-tab-num">Día 5 · Mar 22</div>
+        <div class="day-tab-title">Ha'il naturaleza</div>
+        <div class="day-tab-drive">⏱ Local</div>
+        <div class="day-tab-stops">
+          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Jabal Aja<div class="stop-time">Mañana · Senderismo</div></div></div>
+          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Harrat Bani Rashid<div class="stop-time">Tarde · Volcanes</div></div></div>
+        </div>
+      </div>
+
+      <div class="day-tab" onclick="switchDay(5)">
+        <div class="day-tab-num">Día 6 · Mar 23</div>
+        <div class="day-tab-title">Ha'il → Jubail</div>
+        <div class="day-tab-drive">⏱ 7.5h · Único día largo</div>
+        <div class="day-tab-stops">
+          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Salida Ha'il<div class="stop-time">7:00h</div></div></div>
+          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Llegada Jubail<div class="stop-time">~15:00h</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAP PANEL -->
+    <div class="map-panel" id="mapPanel">
+      <div class="map-day-label" id="mapLabel">DÍA 3 · BURAYDAH → HA'IL</div>
+      <iframe id="mapFrame" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="./Road Trip Ha&#39;il · Marzo 2026_files/maps.html">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+// URLs con direcciones reales entre paradas — formato saddr/daddr garantizado
+const days = [
+  {
+    label: "DÍA 1 · JUBAIL → BURAYDAH",
+    src: "https://maps.google.com/maps?saddr=Al+Jubail,+Saudi+Arabia&daddr=Buraydah,+Saudi+Arabia&output=embed"
+  },
+  {
+    label: "DÍA 2 · BURAYDAH",
+    src: "https://maps.google.com/maps?saddr=Camel+Market,+Buraydah,+Saudi+Arabia&daddr=Uyun+Al+Jawa,+Saudi+Arabia&output=embed"
+  },
+  {
+    label: "DÍA 3 · BURAYDAH → HA'IL",
+    src: "https://maps.google.com/maps?saddr=Buraydah,+Saudi+Arabia&daddr=Hail,+Saudi+Arabia&output=embed"
+  },
+  {
+    label: "DÍA 4 · EXCURSIÓN JUBBAH (UNESCO)",
+    src: "https://maps.google.com/maps?saddr=Hail,+Saudi+Arabia&daddr=Jubbah,+Saudi+Arabia&output=embed"
+  },
+  {
+    label: "DÍA 5 · HA'IL · NATURALEZA",
+    src: "https://maps.google.com/maps?saddr=Hail,+Saudi+Arabia&daddr=Jabal+Aja,+Hail,+Saudi+Arabia&output=embed"
+  },
+  {
+    label: "DÍA 6 · HA'IL → JUBAIL",
+    src: "https://maps.google.com/maps?saddr=Hail,+Saudi+Arabia&daddr=Al+Jubail,+Saudi+Arabia&output=embed"
+  }
+];
+
+function switchDay(i) {
+  document.querySelectorAll('.day-tab').forEach((t,j) => t.classList.toggle('active', j===i));
+  document.getElementById('mapFrame').src = days[i].src;
+  document.getElementById('mapLabel').textContent = days[i].label;
+}
+</script>
+
+<!-- ═══════════ DAYS ═══════════ -->
+<section class="days">
+  <h2 class="days-h">El itinerario</h2>
+
+  <!-- DÍA 1 — carretera Najd -->
+  <div class="day">
+    <div class="di">
+      <img src="./Road Trip Ha&#39;il · Marzo 2026_files/photo-1509316785289-025f5b846b35" alt="Carretera desierto Najd" onerror="this.src=&#39;https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=900&amp;q=85&#39;">
+      <div class="dnum">DÍA 01 · MAR 18</div>
+    </div>
+    <div class="dt">
+      <div class="ddate">Martes 18 · Jubail → Buraydah</div>
+      <h3 class="dtitle">El arranque.<br><em>5h al centro del reino.</em></h3>
+      <p class="dbody">Travesía del Najd. Llegada a media tarde a Buraydah, la ciudad más hospitalaria de Arabia. Primera noche tras el iftar.</p>
+      <div class="tags"><span class="tag">5h conducción</span><span class="tag">Souq Al Musawkaf</span></div>
+    </div>
+  </div>
+
+  <!-- DÍA 2 — mercado camellos (foto real Google Places) -->
+  <div class="day">
+    <div class="di">
+      <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed.jpg" alt="Mercado camellos Buraydah" onerror="this.src=&#39;https://images.unsplash.com/photo-1548019979-e9c87f79e97e?w=900&amp;q=85&#39;">
+      <div class="dnum">DÍA 02 · MAR 19</div>
+    </div>
+    <div class="dt">
+      <div class="ddate">Miércoles 19 · Buraydah</div>
+      <h3 class="dtitle">El mayor mercado<br><em>de camellos del mundo.</em></h3>
+      <p class="dbody">Alba en el mercado de Al Qassim: miles de dromedarios, subastas que alcanzan el millón. Tarde en el oasis histórico de Uyun Al-Jiwa.</p>
+      <div class="tags"><span class="tag">Camel market · alba</span><span class="tag">Uyun Al-Jiwa</span><span class="tag">Sin conducción</span></div>
+    </div>
+  </div>
+
+  <!-- DÍA 3 — Qishlah Palace (foto real Google Places) -->
+  <div class="day">
+    <div class="di">
+      <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed(1).jpg" alt="Qishlah Palace Ha&#39;il" onerror="this.src=&#39;https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&amp;q=85&#39;">
+      <div class="dnum">DÍA 03 · MAR 20</div>
+    </div>
+    <div class="dt">
+      <div class="ddate">Jueves 20 · Buraydah → Ha'il</div>
+      <h3 class="dtitle">Ha'il.<br><em>Capital del norte.</em></h3>
+      <p class="dbody">2.5h hasta Ha'il. Tarde entre los castillos: Al-Qishlah, fortaleza de adobe de 1940 con 142 habitaciones, y A'arif Fort del s.XVII sobre la colina.</p>
+      <div class="tags"><span class="tag">A'arif Fort s.XVII</span><span class="tag">Al-Qishlah Palace</span><span class="tag">2.5h</span></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════ FEATURE BANNER: JUBBAH ═══════════ -->
+<div class="feature">
+  <div class="fbg"></div>
+  <div class="fgrad"></div>
+  <div class="fcontent">
+    <p class="feyebrow">— Día 4 · El highlight del viaje —</p>
+    <h2 class="ftitle">Jubbah.<br><em>10.000 años</em><br>tallados en piedra.</h2>
+    <p class="fquote">Cuando el artista grabó estas figuras, las pirámides de Egipto aún tardarían 4.500 años en construirse. Patrimonio Mundial UNESCO desde 2015.</p>
+    <div class="fbadge">15.000 petroglifos · Entrada gratuita</div>
+  </div>
+</div>
+
+<!-- ═══════════ PHOTO STRIP — fotos reales de cada sitio ═══════════ -->
+<div class="strip">
+  <!-- Grande: Jubbah petroglifos reales -->
+  <div class="si tall">
+    <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed(2).jpg" alt="Petroglifos Jubbah" onerror="this.src=&#39;https://images.unsplash.com/photo-1547234935-80c7145ec969?w=900&amp;q=85&#39;">
+    <div class="scap">Jubbah · Petroglifos UNESCO</div>
+  </div>
+  <!-- A'arif Fort real -->
+  <div class="si">
+    <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed(3).jpg" alt="A&#39;arif Fort Ha&#39;il" onerror="this.src=&#39;https://images.unsplash.com/photo-1518457900945-4b26bc8a3b5c?w=600&amp;q=80&#39;">
+    <div class="scap">A'arif Fort · Ha'il s.XVII</div>
+  </div>
+  <!-- Uyun Al Jiwa real -->
+  <div class="si">
+    <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed(4).jpg" alt="Uyun Al Jiwa Buraydah" onerror="this.src=&#39;https://images.unsplash.com/photo-1502126324834-38f8e02d7160?w=600&amp;q=80&#39;">
+    <div class="scap">Uyun Al-Jiwa · Buraydah</div>
+  </div>
+  <!-- Jabal Aja real -->
+  <div class="si">
+    <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed(5).jpg" alt="Jabal Aja Ha&#39;il" onerror="this.src=&#39;https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=600&amp;q=80&#39;">
+    <div class="scap">Jabal Aja · Montañas Ha'il</div>
+  </div>
+  <!-- Dunas Nafud -->
+  <div class="si">
+    <img src="./Road Trip Ha&#39;il · Marzo 2026_files/photo-1547234935-80c7145ec969" alt="Dunas Gran Nafud">
+    <div class="scap">Gran Nafud · Dunas rojas</div>
+  </div>
+</div>
+
+<!-- ═══════════ DAYS CONT. ═══════════ -->
+<section class="days" style="padding-top:1rem">
+
+  <!-- DÍA 4 — Jubbah petroglifos real -->
+  <div class="day">
+    <div class="di">
+      <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed(6).jpg" alt="Jubbah UNESCO petroglifos" onerror="this.src=&#39;https://images.unsplash.com/photo-1578894381163-e72c17f2d45f?w=900&amp;q=85&#39;">
+      <div class="dnum">DÍA 04 · MAR 21</div>
+    </div>
+    <div class="dt">
+      <div class="ddate">Viernes 21 · Excursión a Jubbah</div>
+      <h3 class="dtitle">Los petroglifos.<br><em>1h al norte.</em></h3>
+      <p class="dbody">Día entero con guía local. Centro de visitantes, 15.000 grabados en el Jabal Umm Sinman. Tarde en las dunas rojas del Gran Nafud al atardecer.</p>
+      <div class="tags"><span class="tag">UNESCO</span><span class="tag">Guía local</span><span class="tag">Nafud sunset</span><span class="tag">Gratuito</span></div>
+    </div>
+  </div>
+
+  <!-- DÍA 5 — Jabal Aja real -->
+  <div class="day">
+    <div class="di">
+      <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed(5).jpg" alt="Jabal Aja Ha&#39;il naturaleza" onerror="this.src=&#39;https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=900&amp;q=85&#39;">
+      <div class="dnum">DÍA 05 · MAR 22</div>
+    </div>
+    <div class="dt">
+      <div class="ddate">Sábado 22 · Ha'il naturaleza</div>
+      <h3 class="dtitle">Volcanes blancos<br><em>y montañas.</em></h3>
+      <p class="dbody">Harrat Bani Rashid: paisaje lunar de lava solidificada. Tarde en Jabal Aja, las montañas protegidas de Ha'il con flora y fauna única del corazón del desierto.</p>
+      <div class="tags"><span class="tag">Harrat volcanes</span><span class="tag">Jabal Aja</span><span class="tag">Senderismo</span></div>
+    </div>
+  </div>
+
+  <!-- DÍA 6 — vuelta carretera Najd -->
+  <div class="day">
+    <div class="di">
+      <img src="./Road Trip Ha&#39;il · Marzo 2026_files/photo-1506905925346-21bda4d32df4" alt="Carretera Najd vuelta" onerror="this.src=&#39;https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&amp;q=85&#39;">
+      <div class="dnum">DÍA 06 · MAR 23</div>
+    </div>
+    <div class="dt">
+      <div class="ddate">Domingo 23 · Ha'il → Jubail</div>
+      <h3 class="dtitle">La vuelta.<br><em>El único día largo.</em></h3>
+      <p class="dbody">Salida a las 7h. 7.5h atravesando el Najd de norte a sur. Parada en ruta para comer. Llegada a Jubail al atardecer.</p>
+      <div class="tags"><span class="tag">7.5h · único día largo</span><span class="tag">Salida 7h</span></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════ NOTES ═══════════ -->
+<div class="notes-wrap">
+  <p class="section-tag">— Notas prácticas</p>
+  <div class="notes">
+    <div class="note">
+      <div class="note-icon">🌙</div>
+      <h4>Ramadán</h4>
+      <p>Sitios arqueológicos y naturales abiertos de día. Restaurantes solo tras el iftar (~18:30h). Llevar siempre agua y snacks en el coche.</p>
+    </div>
+    <div class="note">
+      <div class="note-icon">🧭</div>
+      <h4>Guía en Jubbah</h4>
+      <p>Contratar guía local in situ en el centro de visitantes. Son los únicos que conocen los paneles más espectaculares. Jubbah cierra fines de semana — confirmar antes.</p>
+    </div>
+    <div class="note">
+      <div class="note-icon">🏨</div>
+      <h4>Hoteles</h4>
+      <p>Ha'il: Hail Regency o Fal Hotel. Reservar con antelación — Ramadán genera mucho movimiento de viajeros internos saudíes.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="footer-big">HA'IL</div>
+  <p>Road Trip · 18–24 Marzo 2026 · Jubail, Eastern Province · Saudi Arabia</p>
+</footer>
+
+
+
+</body></html>
