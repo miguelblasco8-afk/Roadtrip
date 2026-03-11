@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<!-- saved from url=(0055)file:///C:/Users/mblasco/Downloads/roadtrip-hail_6.html -->
-<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="es">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Road Trip Ha'il · Marzo 2026</title>
-<link href="./Road Trip Ha&#39;il · Marzo 2026_files/css2" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@400;500&display=swap"></noscript>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 :root {
@@ -303,7 +306,7 @@ footer p { font-family: 'DM Mono', monospace; font-size: .6rem; letter-spacing: 
         <h3>6 días · 4 destinos</h3>
       </div>
 
-      <div class="day-tab" onclick="switchDay(0)">
+      <div class="day-tab active" onclick="switchDay(0)">
         <div class="day-tab-num">Día 1 · Mar 18</div>
         <div class="day-tab-title">Jubail → Buraydah</div>
         <div class="day-tab-drive">⏱ 5h conducción</div>
@@ -319,12 +322,12 @@ footer p { font-family: 'DM Mono', monospace; font-size: .6rem; letter-spacing: 
         <div class="day-tab-title">Buraydah</div>
         <div class="day-tab-drive">⏱ Sin conducción</div>
         <div class="day-tab-stops">
-          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Camel &amp; Cattle Market<div class="stop-time">6:30h · Alba</div></div></div>
+          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Camel & Cattle Market<div class="stop-time">6:30h · Alba</div></div></div>
           <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Uyun Al-Jiwa<div class="stop-time">Tarde · Oasis histórico</div></div></div>
         </div>
       </div>
 
-      <div class="day-tab active" onclick="switchDay(2)">
+      <div class="day-tab" onclick="switchDay(2)">
         <div class="day-tab-num">Día 3 · Mar 20</div>
         <div class="day-tab-title">Buraydah → Ha'il</div>
         <div class="day-tab-drive">⏱ 2.5h conducción</div>
@@ -367,8 +370,9 @@ footer p { font-family: 'DM Mono', monospace; font-size: .6rem; letter-spacing: 
 
     <!-- MAP PANEL -->
     <div class="map-panel" id="mapPanel">
-      <div class="map-day-label" id="mapLabel">DÍA 3 · BURAYDAH → HA'IL</div>
-      <iframe id="mapFrame" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="./Road Trip Ha&#39;il · Marzo 2026_files/maps.html">
+      <div class="map-day-label" id="mapLabel">DÍA 1 · JUBAIL → BURAYDAH</div>
+      <iframe id="mapFrame" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?saddr=Al+Jubail,+Saudi+Arabia&daddr=Buraydah,+Saudi+Arabia&output=embed">
       </iframe>
     </div>
   </div>
@@ -417,7 +421,8 @@ function switchDay(i) {
   <!-- DÍA 1 — carretera Najd -->
   <div class="day">
     <div class="di">
-      <img src="./Road Trip Ha&#39;il · Marzo 2026_files/photo-1509316785289-025f5b846b35" alt="Carretera desierto Najd" onerror="this.src=&#39;https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=900&amp;q=85&#39;">
+      <img src="https://images.unsplash.com/photo-1602001645700-c4de797ef8db?w=900&q=85" alt="Carretera desierto Najd"
+           onerror="this.src='https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=900&q=85'">
       <div class="dnum">DÍA 01 · MAR 18</div>
     </div>
     <div class="dt">
@@ -431,7 +436,8 @@ function switchDay(i) {
   <!-- DÍA 2 — mercado camellos (foto real Google Places) -->
   <div class="day">
     <div class="di">
-      <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed.jpg" alt="Mercado camellos Buraydah" onerror="this.src=&#39;https://images.unsplash.com/photo-1548019979-e9c87f79e97e?w=900&amp;q=85&#39;">
+      <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNEDTfzOj_Buck1PXTNlQJ47jSL65Ar9AnJjUqvjTOVBQD8bgZH46wJmgsOfXwXyrcgSRWr8w3w8PfcPiqBOhj5IVtVlLBbS0Krd3B1d8roTF6_uH-UyZJ9bwwfjU4YizTJCBoADYpoMaPwYyQ=s4800-w800-h600" alt="Mercado camellos Buraydah"
+           onerror="this.src='https://images.unsplash.com/photo-1548019979-e9c87f79e97e?w=900&q=85'">
       <div class="dnum">DÍA 02 · MAR 19</div>
     </div>
     <div class="dt">
@@ -445,7 +451,8 @@ function switchDay(i) {
   <!-- DÍA 3 — Qishlah Palace (foto real Google Places) -->
   <div class="day">
     <div class="di">
-      <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed(1).jpg" alt="Qishlah Palace Ha&#39;il" onerror="this.src=&#39;https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&amp;q=85&#39;">
+      <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNHOftQTGv3c3koksywdEgNFGrUZOv6jbtz4zc_F96ab9hrRRE-nbJvcWX4MU27srLI1FXXrH_WNXh6pUpUYtWeo5AjpXyIO5LbCCrtuReulyiY2dA0bbjX5Sy-GRavL-QEbNmop2n7QHvJjOhY=s4800-w800-h600" alt="Qishlah Palace Ha'il"
+           onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85'">
       <div class="dnum">DÍA 03 · MAR 20</div>
     </div>
     <div class="dt">
@@ -474,27 +481,31 @@ function switchDay(i) {
 <div class="strip">
   <!-- Grande: Jubbah petroglifos reales -->
   <div class="si tall">
-    <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed(2).jpg" alt="Petroglifos Jubbah" onerror="this.src=&#39;https://images.unsplash.com/photo-1547234935-80c7145ec969?w=900&amp;q=85&#39;">
+    <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNHMTzZ4XMkvYmSHKET6lRFYuJ-JzEbea3DNOYesLrjWG0a0erngHGVzWOpNEhr0Ajuf0ROJbL0agHyVKUaz37fycJFlo7y1KlslYYono2P8Q-bnvAbwZQza37ICrAj_UQr6qzfP_FmM3x7P=s4800-w800-h600" alt="Petroglifos Jubbah"
+         onerror="this.src='https://images.unsplash.com/photo-1547234935-80c7145ec969?w=900&q=85'">
     <div class="scap">Jubbah · Petroglifos UNESCO</div>
   </div>
   <!-- A'arif Fort real -->
   <div class="si">
-    <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed(3).jpg" alt="A&#39;arif Fort Ha&#39;il" onerror="this.src=&#39;https://images.unsplash.com/photo-1518457900945-4b26bc8a3b5c?w=600&amp;q=80&#39;">
+    <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNE-MPVhwDsnSBw-GnYLZBlQTKdKOb9GR-GCS5s9KqpgSgvi2c4dijvrheL8t9L0kSi5wGNuHb7tzHpkaQQHxplWkL5upFOmJvN05mw1SOYSQNeWwuVfmbP03PpbwhSQ-s0TVg2MkyRjq4p1s0Q=s4800-w800-h600" alt="A'arif Fort Ha'il"
+         onerror="this.src='https://images.unsplash.com/photo-1518457900945-4b26bc8a3b5c?w=600&q=80'">
     <div class="scap">A'arif Fort · Ha'il s.XVII</div>
   </div>
   <!-- Uyun Al Jiwa real -->
   <div class="si">
-    <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed(4).jpg" alt="Uyun Al Jiwa Buraydah" onerror="this.src=&#39;https://images.unsplash.com/photo-1502126324834-38f8e02d7160?w=600&amp;q=80&#39;">
+    <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNHciqQ7hYlP_F9EaWY9OA401Dr37HwBOoqqIhikBRq4rJ1e_RgV9bi1hX7bhYtHfBJo7vBazKQlchz6OLDpFIhJJKFzypYpqWIBg8w3Uh580ORHtSUMb2t9FAWE6l7l_eCHKa4Wri6Sedxr=s4800-w800-h600" alt="Uyun Al Jiwa Buraydah"
+         onerror="this.src='https://images.unsplash.com/photo-1502126324834-38f8e02d7160?w=600&q=80'">
     <div class="scap">Uyun Al-Jiwa · Buraydah</div>
   </div>
   <!-- Jabal Aja real -->
   <div class="si">
-    <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed(5).jpg" alt="Jabal Aja Ha&#39;il" onerror="this.src=&#39;https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=600&amp;q=80&#39;">
+    <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNHleSZhpVWfsv4JZ0Tthc1REtVHc26qL310-I_NdkPhLxepbCQszwDLMngzg7lB_DMCL5YVcxDJA_h8ifzwVyXOByapAoM-_S5LMLQvYNxzgZg5Puq_syUXSmEtKgwa-W6L4khki3v0OyMYNw=s4800-w800-h600" alt="Jabal Aja Ha'il"
+         onerror="this.src='https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=600&q=80'">
     <div class="scap">Jabal Aja · Montañas Ha'il</div>
   </div>
   <!-- Dunas Nafud -->
   <div class="si">
-    <img src="./Road Trip Ha&#39;il · Marzo 2026_files/photo-1547234935-80c7145ec969" alt="Dunas Gran Nafud">
+    <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=800&q=85" alt="Dunas Gran Nafud">
     <div class="scap">Gran Nafud · Dunas rojas</div>
   </div>
 </div>
@@ -505,7 +516,8 @@ function switchDay(i) {
   <!-- DÍA 4 — Jubbah petroglifos real -->
   <div class="day">
     <div class="di">
-      <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed(6).jpg" alt="Jubbah UNESCO petroglifos" onerror="this.src=&#39;https://images.unsplash.com/photo-1578894381163-e72c17f2d45f?w=900&amp;q=85&#39;">
+      <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNFKr5rN81q23TbzOkuQraOr58CI1uBNPBvWDD6syOF42QX21rusHkD1zIws-p2yYHzgkjAZbk645S-rdp9Vl5qQ5OhiJIVdLZ4w7rvFYa5eqAm3f30ROIf0pM2TadhUD55W7zJnjGEP0bad77U=s4800-w800-h600" alt="Jubbah UNESCO petroglifos"
+           onerror="this.src='https://images.unsplash.com/photo-1578894381163-e72c17f2d45f?w=900&q=85'">
       <div class="dnum">DÍA 04 · MAR 21</div>
     </div>
     <div class="dt">
@@ -519,7 +531,8 @@ function switchDay(i) {
   <!-- DÍA 5 — Jabal Aja real -->
   <div class="day">
     <div class="di">
-      <img src="./Road Trip Ha&#39;il · Marzo 2026_files/unnamed(5).jpg" alt="Jabal Aja Ha&#39;il naturaleza" onerror="this.src=&#39;https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=900&amp;q=85&#39;">
+      <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNHleSZhpVWfsv4JZ0Tthc1REtVHc26qL310-I_NdkPhLxepbCQszwDLMngzg7lB_DMCL5YVcxDJA_h8ifzwVyXOByapAoM-_S5LMLQvYNxzgZg5Puq_syUXSmEtKgwa-W6L4khki3v0OyMYNw=s4800-w800-h600" alt="Jabal Aja Ha'il naturaleza"
+           onerror="this.src='https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=900&q=85'">
       <div class="dnum">DÍA 05 · MAR 22</div>
     </div>
     <div class="dt">
@@ -533,7 +546,8 @@ function switchDay(i) {
   <!-- DÍA 6 — vuelta carretera Najd -->
   <div class="day">
     <div class="di">
-      <img src="./Road Trip Ha&#39;il · Marzo 2026_files/photo-1506905925346-21bda4d32df4" alt="Carretera Najd vuelta" onerror="this.src=&#39;https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&amp;q=85&#39;">
+      <img src="https://images.unsplash.com/photo-1602001645700-c4de797ef8db?w=900&q=85" alt="Carretera Najd vuelta"
+           onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=85'">
       <div class="dnum">DÍA 06 · MAR 23</div>
     </div>
     <div class="dt">
@@ -574,6 +588,5 @@ function switchDay(i) {
   <p>Road Trip · 18–24 Marzo 2026 · Jubail, Eastern Province · Saudi Arabia</p>
 </footer>
 
-
-
-</body></html>
+</body>
+</html>
