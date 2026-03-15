@@ -23,7 +23,6 @@ body { background: var(--ink); color: var(--cream); font-family: 'Playfair Displ
 }
 .hero-bg {
   position: absolute; inset: 0;
-  /* Dunas rojas Nafud – Arabia Saudí */
   background-image: url('https://images.unsplash.com/photo-1547234935-80c7145ec969?w=1800&q=90');
   background-size: cover; background-position: center 50%;
   filter: brightness(0.45) saturate(0.85);
@@ -85,7 +84,6 @@ body { background: var(--ink); color: var(--cream); font-family: 'Playfair Displ
   display: grid; grid-template-columns: 280px 1fr;
   min-height: 540px;
 }
-/* Day tabs sidebar */
 .map-sidebar {
   background: var(--card); border-right: 1px solid rgba(181,108,58,.15);
   display: flex; flex-direction: column; overflow-y: auto;
@@ -117,7 +115,6 @@ body { background: var(--ink); color: var(--cream); font-family: 'Playfair Displ
   font-family: 'DM Mono', monospace; font-size: .46rem;
   color: var(--ash); margin-top: .35rem; letter-spacing: .1em;
 }
-/* Stops list inside active tab */
 .day-tab-stops { display: none; margin-top: .7rem; }
 .day-tab.active .day-tab-stops { display: block; }
 .stop-item {
@@ -132,7 +129,6 @@ body { background: var(--ink); color: var(--cream); font-family: 'Playfair Displ
 .stop-dot.main { background: var(--sand); width: 9px; height: 9px; margin-top: .25rem; }
 .stop-name { font-family: 'DM Mono', monospace; font-size: .5rem; color: var(--ash); letter-spacing: .05em; line-height: 1.5; }
 .stop-time { font-size: .48rem; color: rgba(138,122,104,.6); }
-/* Map iframe panel */
 .map-panel { position: relative; }
 .map-panel iframe { width: 100%; height: 100%; border: none; display: block; min-height: 540px; }
 .map-day-label {
@@ -181,7 +177,7 @@ body { background: var(--ink); color: var(--cream); font-family: 'Playfair Displ
 .tags { display: flex; flex-wrap: wrap; gap: .45rem; }
 .tag { font-family: 'DM Mono', monospace; font-size: .54rem; letter-spacing: .12em; color: var(--clay); border: 1px solid rgba(181,108,58,.32); padding: .28rem .65rem; text-transform: uppercase; }
 
-/* ── FEATURE BANNER (Jubbah) ── */
+/* ── FEATURE BANNER ── */
 .feature {
   position: relative; overflow: hidden;
   min-height: 520px; display: flex; align-items: center; justify-content: center;
@@ -189,8 +185,6 @@ body { background: var(--ink); color: var(--cream); font-family: 'Playfair Displ
 }
 .fbg {
   position: absolute; inset: 0;
-  /* Jubbah petroglifos reales – Google Places */
-  background-image: url('https://lh3.googleusercontent.com/place-photos/AL8-SNFKr5rN81q23TbzOkuQraOr58CI1uBNPBvWDD6syOF42QX21rusHkD1zIws-p2yYHzgkjAZbk645S-rdp9Vl5qQ5OhiJIVdLZ4w7rvFYa5eqAm3f30ROIf0pM2TadhUD55W7zJnjGEP0bad77U=s4800-w800-h600');
   background-size: cover; background-position: center;
   filter: brightness(.28) saturate(.6);
 }
@@ -243,14 +237,13 @@ footer p { font-family: 'DM Mono', monospace; font-size: .6rem; letter-spacing: 
   .strip { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 190px); }
   .si.tall { grid-row: span 1; }
   .hero-content { padding: 3.5rem 2rem; }
-  .map-embed { height: 380px; }
 }
 </style>
 </head>
 <body>
 
 <!-- ═══════════════════════════════════════════
-     HERO — Dunas rojas del Gran Nafud, Arabia Saudí
+     HERO — Dunas rojas del Gran Nafud
      ═══════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero-bg"></div>
@@ -258,12 +251,12 @@ footer p { font-family: 'DM Mono', monospace; font-size: .6rem; letter-spacing: 
   <div class="hero-content">
     <p class="hero-tag">Road Trip · Arabia Saudí · Marzo 2026</p>
     <h1 class="hero-title">Al norte<br>del <em>desierto</em></h1>
-    <p class="hero-sub">Jubail → Buraydah → Ha'il<br>Volcanes, dunas rojas y petroglifos de 10.000 años</p>
+    <p class="hero-sub">Jubail → Riad → Buraydah → Ha'il → Jubbah → Hafar Al-Batin<br>Desierto, volcanes y petroglifos de 10.000 años</p>
     <div class="pills">
-      <span class="pill">18 – 24 Mar</span>
-      <span class="pill">6 noches</span>
-      <span class="pill">~1.500 km</span>
-      <span class="pill">2 × UNESCO</span>
+      <span class="pill">18 – 23 Mar</span>
+      <span class="pill">5 noches</span>
+      <span class="pill">~2.000 km</span>
+      <span class="pill">UNESCO</span>
       <span class="pill">0 vuelos</span>
     </div>
   </div>
@@ -271,9 +264,9 @@ footer p { font-family: 'DM Mono', monospace; font-size: .6rem; letter-spacing: 
 
 <!-- ═══════════ STATS ═══════════ -->
 <div class="stats">
-  <div class="stat"><div class="stat-n">6</div><div class="stat-l">Noches</div></div>
-  <div class="stat"><div class="stat-n">≤5h</div><div class="stat-l">Máx/día</div></div>
-  <div class="stat"><div class="stat-n">2</div><div class="stat-l">UNESCO</div></div>
+  <div class="stat"><div class="stat-n">5</div><div class="stat-l">Noches</div></div>
+  <div class="stat"><div class="stat-n">≤4h</div><div class="stat-l">Máx/día</div></div>
+  <div class="stat"><div class="stat-n">1</div><div class="stat-l">UNESCO</div></div>
   <div class="stat"><div class="stat-n">10k</div><div class="stat-l">Años histor.</div></div>
   <div class="stat"><div class="stat-n">0</div><div class="stat-l">Vuelos</div></div>
 </div>
@@ -283,13 +276,17 @@ footer p { font-family: 'DM Mono', monospace; font-size: .6rem; letter-spacing: 
   <p class="section-tag">— Ruta completa</p>
   <div class="route">
     <div class="rnode"><div class="rdot home"></div><div class="rname">JUBAIL</div></div>
-    <div class="rleg"><div class="rleg-line"></div><div class="rleg-label">5h · D1</div></div>
+    <div class="rleg"><div class="rleg-line"></div><div class="rleg-label">4.5h · D1</div></div>
+    <div class="rnode"><div class="rdot"></div><div class="rname">RIAD</div></div>
+    <div class="rleg"><div class="rleg-line"></div><div class="rleg-label">4h · D3</div></div>
     <div class="rnode"><div class="rdot"></div><div class="rname">BURAYDAH</div></div>
-    <div class="rleg"><div class="rleg-line"></div><div class="rleg-label">2.5h · D3</div></div>
+    <div class="rleg"><div class="rleg-line"></div><div class="rleg-label">2.5h · D4</div></div>
     <div class="rnode"><div class="rdot"></div><div class="rname">HA'IL</div></div>
-    <div class="rleg"><div class="rleg-line"></div><div class="rleg-label">1h · D4</div></div>
+    <div class="rleg"><div class="rleg-line"></div><div class="rleg-label">1.5h · D5</div></div>
     <div class="rnode"><div class="rdot"></div><div class="rname">JUBBAH</div></div>
     <div class="rleg"><div class="rleg-line"></div><div class="rleg-label">7.5h · D6</div></div>
+    <div class="rnode"><div class="rdot"></div><div class="rname">HAFAR</div></div>
+    <div class="rleg"><div class="rleg-line"></div><div class="rleg-label">4.5h · D7</div></div>
     <div class="rnode"><div class="rdot home"></div><div class="rname">JUBAIL</div></div>
   </div>
 </div>
@@ -298,112 +295,110 @@ footer p { font-family: 'DM Mono', monospace; font-size: .6rem; letter-spacing: 
 <div class="map-section">
   <p class="section-tag">— Mapa del itinerario</p>
   <div class="map-widget">
-
-    <!-- SIDEBAR: tabs por día -->
     <div class="map-sidebar">
       <div class="map-sidebar-header">
-        <p>18 – 24 Marzo 2026</p>
-        <h3>6 días · 4 destinos</h3>
+        <p>18 – 23 Marzo 2026</p>
+        <h3>6 días · 5 destinos</h3>
       </div>
 
       <div class="day-tab active" onclick="switchDay(0)">
-        <div class="day-tab-num">Día 1 · Mar 18</div>
-        <div class="day-tab-title">Jubail → Buraydah</div>
-        <div class="day-tab-drive">⏱ 5h conducción</div>
+        <div class="day-tab-num">Día 1 · Mié 18</div>
+        <div class="day-tab-title">Jubail → Riad</div>
+        <div class="day-tab-drive">⏱ 4.5h conducción</div>
         <div class="day-tab-stops">
-          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Al Jubail<div class="stop-time">Salida 8:00h</div></div></div>
-          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Buraydah<div class="stop-time">Llegada ~13:00h</div></div></div>
-          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Souq Al Musawkaf<div class="stop-time">Noche tras iftar</div></div></div>
+          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Al Jubail<div class="stop-time">Salida mañana</div></div></div>
+          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Riad<div class="stop-time">Dormir · cena Riad</div></div></div>
         </div>
       </div>
 
       <div class="day-tab" onclick="switchDay(1)">
-        <div class="day-tab-num">Día 2 · Mar 19</div>
-        <div class="day-tab-title">Buraydah</div>
-        <div class="day-tab-drive">⏱ Sin conducción</div>
+        <div class="day-tab-num">Día 2 · Jue 19</div>
+        <div class="day-tab-title">Riad → Desierto</div>
+        <div class="day-tab-drive">⏱ Overnight en jaima</div>
         <div class="day-tab-stops">
-          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Camel & Cattle Market<div class="stop-time">6:30h · Alba</div></div></div>
-          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Uyun Al-Jiwa<div class="stop-time">Tarde · Oasis histórico</div></div></div>
+          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Dunes & Dates Camp<div class="stop-time">15h → overnight</div></div></div>
+          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Cena beduina + estrellas<div class="stop-time">Stargazing</div></div></div>
         </div>
       </div>
 
       <div class="day-tab" onclick="switchDay(2)">
-        <div class="day-tab-num">Día 3 · Mar 20</div>
-        <div class="day-tab-title">Buraydah → Ha'il</div>
-        <div class="day-tab-drive">⏱ 2.5h conducción</div>
+        <div class="day-tab-num">Día 3 · Vie 20</div>
+        <div class="day-tab-title">Desierto → Buraydah</div>
+        <div class="day-tab-drive">⏱ ~2.5h conducción</div>
         <div class="day-tab-stops">
-          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Qishlah Palace<div class="stop-time">Tarde · 142 habitaciones</div></div></div>
-          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">A'arif Fort<div class="stop-time">S.XVII · Vistas panorámicas</div></div></div>
+          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Desayuno en el desierto<div class="stop-time">Amanecer</div></div></div>
+          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Ushaiqer Heritage Village<div class="stop-time">De camino · Adobe 1.500 años</div></div></div>
+          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Buraydah<div class="stop-time">Dormir</div></div></div>
         </div>
       </div>
 
       <div class="day-tab" onclick="switchDay(3)">
-        <div class="day-tab-num">Día 4 · Mar 21</div>
-        <div class="day-tab-title">Excursión Jubbah</div>
-        <div class="day-tab-drive">⏱ 2h ida/vuelta · UNESCO ★</div>
+        <div class="day-tab-num">Día 4 · Sáb 21</div>
+        <div class="day-tab-title">Buraydah → Ha'il → Jubbah</div>
+        <div class="day-tab-drive">⏱ 2.5h + 1.5h conducción</div>
         <div class="day-tab-stops">
-          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Jubbah Petroglyphs<div class="stop-time">9:00h · 15.000 grabados</div></div></div>
-          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Gran Nafud<div class="stop-time">Tarde · Dunas al atardecer</div></div></div>
+          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Buraydah<div class="stop-time">Salida mañana</div></div></div>
+          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Ha'il · A'arif Fort + Qishlah<div class="stop-time">Parada visita</div></div></div>
+          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Jubbah UNESCO<div class="stop-time">Dormir</div></div></div>
         </div>
       </div>
 
       <div class="day-tab" onclick="switchDay(4)">
-        <div class="day-tab-num">Día 5 · Mar 22</div>
-        <div class="day-tab-title">Ha'il naturaleza</div>
-        <div class="day-tab-drive">⏱ Local</div>
+        <div class="day-tab-num">Día 5 · Dom 22</div>
+        <div class="day-tab-title">Jubbah → Hafar Al-Batin</div>
+        <div class="day-tab-drive">⏱ 7.5h conducción</div>
         <div class="day-tab-stops">
-          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Jabal Aja<div class="stop-time">Mañana · Senderismo</div></div></div>
-          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Harrat Bani Rashid<div class="stop-time">Tarde · Volcanes</div></div></div>
+          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Petroglifos Jubbah<div class="stop-time">Mañana · 15.000 grabados</div></div></div>
+          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Hafar Al-Batin<div class="stop-time">Noche · parada intermedia</div></div></div>
         </div>
       </div>
 
       <div class="day-tab" onclick="switchDay(5)">
-        <div class="day-tab-num">Día 6 · Mar 23</div>
-        <div class="day-tab-title">Ha'il → Jubail</div>
-        <div class="day-tab-drive">⏱ 7.5h · Único día largo</div>
+        <div class="day-tab-num">Día 6 · Lun 23</div>
+        <div class="day-tab-title">Hafar Al-Batin → Jubail</div>
+        <div class="day-tab-drive">⏱ 4.5h · vuelta a casa</div>
         <div class="day-tab-stops">
-          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Salida Ha'il<div class="stop-time">7:00h</div></div></div>
-          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Llegada Jubail<div class="stop-time">~15:00h</div></div></div>
+          <div class="stop-item"><div class="stop-dot main"></div><div class="stop-name">Salida Hafar<div class="stop-time">Mañana</div></div></div>
+          <div class="stop-item"><div class="stop-dot"></div><div class="stop-name">Llegada Jubail<div class="stop-time">Mediodía</div></div></div>
         </div>
       </div>
     </div>
 
     <!-- MAP PANEL -->
     <div class="map-panel" id="mapPanel">
-      <div class="map-day-label" id="mapLabel">DÍA 1 · JUBAIL → BURAYDAH</div>
+      <div class="map-day-label" id="mapLabel">DÍA 1 · JUBAIL → RIAD</div>
       <iframe id="mapFrame" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?saddr=Al+Jubail,+Saudi+Arabia&daddr=Buraydah,+Saudi+Arabia&output=embed">
+        src="https://maps.google.com/maps?saddr=Al+Jubail,+Saudi+Arabia&daddr=Riyadh,+Saudi+Arabia&output=embed">
       </iframe>
     </div>
   </div>
 </div>
 
 <script>
-// URLs con direcciones reales entre paradas — formato saddr/daddr garantizado
 const days = [
   {
-    label: "DÍA 1 · JUBAIL → BURAYDAH",
-    src: "https://maps.google.com/maps?saddr=Al+Jubail,+Saudi+Arabia&daddr=Buraydah,+Saudi+Arabia&output=embed"
+    label: "DÍA 1 · JUBAIL → RIAD",
+    src: "https://maps.google.com/maps?saddr=Al+Jubail,+Saudi+Arabia&daddr=Riyadh,+Saudi+Arabia&output=embed"
   },
   {
-    label: "DÍA 2 · BURAYDAH",
-    src: "https://maps.google.com/maps?saddr=Camel+Market,+Buraydah,+Saudi+Arabia&daddr=Uyun+Al+Jawa,+Saudi+Arabia&output=embed"
+    label: "DÍA 2 · RIAD → DESIERTO",
+    src: "https://maps.google.com/maps?saddr=Riyadh,+Saudi+Arabia&daddr=Dunes+and+Dates+Desert+Camp,+Riyadh&output=embed"
   },
   {
-    label: "DÍA 3 · BURAYDAH → HA'IL",
-    src: "https://maps.google.com/maps?saddr=Buraydah,+Saudi+Arabia&daddr=Hail,+Saudi+Arabia&output=embed"
+    label: "DÍA 3 · DESIERTO → BURAYDAH",
+    src: "https://maps.google.com/maps?saddr=Riyadh,+Saudi+Arabia&daddr=Ushaiqer+Heritage+Village,+Saudi+Arabia&daddr2=Buraydah,+Saudi+Arabia&output=embed"
   },
   {
-    label: "DÍA 4 · EXCURSIÓN JUBBAH (UNESCO)",
-    src: "https://maps.google.com/maps?saddr=Hail,+Saudi+Arabia&daddr=Jubbah,+Saudi+Arabia&output=embed"
+    label: "DÍA 4 · BURAYDAH → HA'IL → JUBBAH",
+    src: "https://maps.google.com/maps?saddr=Buraydah,+Saudi+Arabia&daddr=Hail,+Saudi+Arabia&daddr2=Jubbah,+Saudi+Arabia&output=embed"
   },
   {
-    label: "DÍA 5 · HA'IL · NATURALEZA",
-    src: "https://maps.google.com/maps?saddr=Hail,+Saudi+Arabia&daddr=Jabal+Aja,+Hail,+Saudi+Arabia&output=embed"
+    label: "DÍA 5 · JUBBAH → HAFAR AL-BATIN",
+    src: "https://maps.google.com/maps?saddr=Jubbah,+Saudi+Arabia&daddr=Hafar+Al+Batin,+Saudi+Arabia&output=embed"
   },
   {
-    label: "DÍA 6 · HA'IL → JUBAIL",
-    src: "https://maps.google.com/maps?saddr=Hail,+Saudi+Arabia&daddr=Al+Jubail,+Saudi+Arabia&output=embed"
+    label: "DÍA 6 · HAFAR AL-BATIN → JUBAIL",
+    src: "https://maps.google.com/maps?saddr=Hafar+Al+Batin,+Saudi+Arabia&daddr=Al+Jubail,+Saudi+Arabia&output=embed"
   }
 ];
 
@@ -418,48 +413,48 @@ function switchDay(i) {
 <section class="days">
   <h2 class="days-h">El itinerario</h2>
 
-  <!-- DÍA 1 — carretera Najd -->
+  <!-- DÍA 1 — Jubail → Riad -->
   <div class="day">
     <div class="di">
-      <img src="https://images.unsplash.com/photo-1602001645700-c4de797ef8db?w=900&q=85" alt="Carretera desierto Najd"
+      <img src="https://images.unsplash.com/photo-1602001645700-c4de797ef8db?w=900&q=85" alt="Carretera desierto Arabia Saudí"
            onerror="this.src='https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=900&q=85'">
-      <div class="dnum">DÍA 01 · MAR 18</div>
+      <div class="dnum">DÍA 01 · MIÉ 18</div>
     </div>
     <div class="dt">
-      <div class="ddate">Martes 18 · Jubail → Buraydah</div>
-      <h3 class="dtitle">El arranque.<br><em>5h al centro del reino.</em></h3>
-      <p class="dbody">Travesía del Najd. Llegada a media tarde a Buraydah, la ciudad más hospitalaria de Arabia. Primera noche tras el iftar.</p>
-      <div class="tags"><span class="tag">5h conducción</span><span class="tag">Souq Al Musawkaf</span></div>
+      <div class="ddate">Miércoles 18 · Jubail → Riad</div>
+      <h3 class="dtitle">El arranque.<br><em>4.5h al corazón del reino.</em></h3>
+      <p class="dbody">Travesía del Najd desde el Golfo hasta la capital. Primera noche en Riad. Al día siguiente: el desierto.</p>
+      <div class="tags"><span class="tag">4.5h conducción</span><span class="tag">Cena en Riad</span></div>
     </div>
   </div>
 
-  <!-- DÍA 2 — mercado camellos (foto real Google Places) -->
+  <!-- DÍA 2 — Dunes & Dates Camp (foto Google Places) -->
   <div class="day">
     <div class="di">
-      <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNEDTfzOj_Buck1PXTNlQJ47jSL65Ar9AnJjUqvjTOVBQD8bgZH46wJmgsOfXwXyrcgSRWr8w3w8PfcPiqBOhj5IVtVlLBbS0Krd3B1d8roTF6_uH-UyZJ9bwwfjU4YizTJCBoADYpoMaPwYyQ=s4800-w800-h600" alt="Mercado camellos Buraydah"
-           onerror="this.src='https://images.unsplash.com/photo-1548019979-e9c87f79e97e?w=900&q=85'">
-      <div class="dnum">DÍA 02 · MAR 19</div>
+      <img src="https://www.dunesanddates.com/wp-content/uploads/2021/01/DSC09437-scaled.jpg"
+           onerror="this.src='https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=900&q=85'" alt="Dunes and Dates Desert Camp Saudi Arabia">
+      <div class="dnum">DÍA 02 · JUE 19</div>
     </div>
     <div class="dt">
-      <div class="ddate">Miércoles 19 · Buraydah</div>
-      <h3 class="dtitle">El mayor mercado<br><em>de camellos del mundo.</em></h3>
-      <p class="dbody">Alba en el mercado de Al Qassim: miles de dromedarios, subastas que alcanzan el millón. Tarde en el oasis histórico de Uyun Al-Jiwa.</p>
-      <div class="tags"><span class="tag">Camel market · alba</span><span class="tag">Uyun Al-Jiwa</span><span class="tag">Sin conducción</span></div>
+      <div class="ddate">Jueves 19 · Overnight en el desierto</div>
+      <h3 class="dtitle">La jaima.<br><em>Cielo sin fin.</em></h3>
+      <p class="dbody">Tarde en el campamento beduino: atardecer en las dunas, cena de cordero mandi bajo las estrellas, café árabe. Noche en tienda con el cielo más despejado del mundo.</p>
+      <div class="tags"><span class="tag">Overnight · jaima</span><span class="tag">Cena beduina</span><span class="tag">Stargazing</span><span class="tag">~650 SAR/p.</span></div>
     </div>
   </div>
 
-  <!-- DÍA 3 — Qishlah Palace (foto real Google Places) -->
+  <!-- DÍA 3 — Ushaiqer (foto Google Places) -->
   <div class="day">
     <div class="di">
-      <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNHOftQTGv3c3koksywdEgNFGrUZOv6jbtz4zc_F96ab9hrRRE-nbJvcWX4MU27srLI1FXXrH_WNXh6pUpUYtWeo5AjpXyIO5LbCCrtuReulyiY2dA0bbjX5Sy-GRavL-QEbNmop2n7QHvJjOhY=s4800-w800-h600" alt="Qishlah Palace Ha'il"
-           onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85'">
-      <div class="dnum">DÍA 03 · MAR 20</div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Ushaiger_Heritage_Village.jpg/800px-Ushaiger_Heritage_Village.jpg"
+           onerror="this.src='https://images.unsplash.com/photo-1518457900945-4b26bc8a3b5c?w=900&q=85'" alt="Ushaiqer Heritage Village adobe Saudi Arabia">
+      <div class="dnum">DÍA 03 · VIE 20</div>
     </div>
     <div class="dt">
-      <div class="ddate">Jueves 20 · Buraydah → Ha'il</div>
-      <h3 class="dtitle">Ha'il.<br><em>Capital del norte.</em></h3>
-      <p class="dbody">2.5h hasta Ha'il. Tarde entre los castillos: Al-Qishlah, fortaleza de adobe de 1940 con 142 habitaciones, y A'arif Fort del s.XVII sobre la colina.</p>
-      <div class="tags"><span class="tag">A'arif Fort s.XVII</span><span class="tag">Al-Qishlah Palace</span><span class="tag">2.5h</span></div>
+      <div class="ddate">Viernes 20 · Desierto → Buraydah</div>
+      <h3 class="dtitle">Adobe y barro.<br><em>1.500 años en pie.</em></h3>
+      <p class="dbody">Desayuno al amanecer en el desierto. Parada en Ushaiqer, el pueblo de adobe más antiguo de Arabia con callejones y mezquitas de barro. Llegada a Buraydah al atardecer.</p>
+      <div class="tags"><span class="tag">Ushaiqer Heritage</span><span class="tag">Arquitectura Najdi</span><span class="tag">Buraydah noche</span></div>
     </div>
   </div>
 
@@ -467,45 +462,45 @@ function switchDay(i) {
 
 <!-- ═══════════ FEATURE BANNER: JUBBAH ═══════════ -->
 <div class="feature">
-  <div class="fbg"></div>
+  <div class="fbg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Petroglyphs_at_Jubbah_rock_art_site%2C_Saudi_Arabia_%281%29.jpg/800px-Petroglyphs_at_Jubbah_rock_art_site%2C_Saudi_Arabia_%281%29.jpg')"></div>
   <div class="fgrad"></div>
   <div class="fcontent">
-    <p class="feyebrow">— Día 4 · El highlight del viaje —</p>
+    <p class="feyebrow">— Día 5 · El highlight del viaje —</p>
     <h2 class="ftitle">Jubbah.<br><em>10.000 años</em><br>tallados en piedra.</h2>
     <p class="fquote">Cuando el artista grabó estas figuras, las pirámides de Egipto aún tardarían 4.500 años en construirse. Patrimonio Mundial UNESCO desde 2015.</p>
     <div class="fbadge">15.000 petroglifos · Entrada gratuita</div>
   </div>
 </div>
 
-<!-- ═══════════ PHOTO STRIP — fotos reales de cada sitio ═══════════ -->
+<!-- ═══════════ PHOTO STRIP ═══════════ -->
 <div class="strip">
-  <!-- Grande: Jubbah petroglifos reales -->
+  <!-- Grande: Jubbah petroglifos -->
   <div class="si tall">
-    <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNHMTzZ4XMkvYmSHKET6lRFYuJ-JzEbea3DNOYesLrjWG0a0erngHGVzWOpNEhr0Ajuf0ROJbL0agHyVKUaz37fycJFlo7y1KlslYYono2P8Q-bnvAbwZQza37ICrAj_UQr6qzfP_FmM3x7P=s4800-w800-h600" alt="Petroglifos Jubbah"
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Petroglyph_of_the_king%2C_Jubbah_rock_art_site%2C_Saudi_Arabia.jpg/800px-Petroglyph_of_the_king%2C_Jubbah_rock_art_site%2C_Saudi_Arabia.jpg" alt="Petroglifos Jubbah UNESCO"
          onerror="this.src='https://images.unsplash.com/photo-1547234935-80c7145ec969?w=900&q=85'">
     <div class="scap">Jubbah · Petroglifos UNESCO</div>
   </div>
-  <!-- A'arif Fort real -->
+  <!-- A'arif Fort -->
   <div class="si">
-    <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNE-MPVhwDsnSBw-GnYLZBlQTKdKOb9GR-GCS5s9KqpgSgvi2c4dijvrheL8t9L0kSi5wGNuHb7tzHpkaQQHxplWkL5upFOmJvN05mw1SOYSQNeWwuVfmbP03PpbwhSQ-s0TVg2MkyRjq4p1s0Q=s4800-w800-h600" alt="A'arif Fort Ha'il"
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Hail_-_panoramio_%2810%29.jpg/800px-Hail_-_panoramio_%2810%29.jpg" alt="A'arif Fort Ha'il"
          onerror="this.src='https://images.unsplash.com/photo-1518457900945-4b26bc8a3b5c?w=600&q=80'">
     <div class="scap">A'arif Fort · Ha'il s.XVII</div>
   </div>
-  <!-- Uyun Al Jiwa real -->
+  <!-- Qishlah Palace -->
   <div class="si">
-    <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNHciqQ7hYlP_F9EaWY9OA401Dr37HwBOoqqIhikBRq4rJ1e_RgV9bi1hX7bhYtHfBJo7vBazKQlchz6OLDpFIhJJKFzypYpqWIBg8w3Uh580ORHtSUMb2t9FAWE6l7l_eCHKa4Wri6Sedxr=s4800-w800-h600" alt="Uyun Al Jiwa Buraydah"
-         onerror="this.src='https://images.unsplash.com/photo-1502126324834-38f8e02d7160?w=600&q=80'">
-    <div class="scap">Uyun Al-Jiwa · Buraydah</div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Qishlah_Palace%2C_Ha%27il.jpg/800px-Qishlah_Palace%2C_Ha%27il.jpg" alt="Qishlah Palace Ha'il"
+         onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'">
+    <div class="scap">Qishlah Palace · Ha'il 1940</div>
   </div>
-  <!-- Jabal Aja real -->
+  <!-- Ajaa Mountains -->
   <div class="si">
-    <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNHleSZhpVWfsv4JZ0Tthc1REtVHc26qL310-I_NdkPhLxepbCQszwDLMngzg7lB_DMCL5YVcxDJA_h8ifzwVyXOByapAoM-_S5LMLQvYNxzgZg5Puq_syUXSmEtKgwa-W6L4khki3v0OyMYNw=s4800-w800-h600" alt="Jabal Aja Ha'il"
+    <img src="https://images.unsplash.com/photo-1578894381163-e72c17f2d45f?w=800&q=85" alt="Ajaa Mountains Ha'il"
          onerror="this.src='https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=600&q=80'">
-    <div class="scap">Jabal Aja · Montañas Ha'il</div>
+    <div class="scap">Ajaa Mountains · Ha'il</div>
   </div>
   <!-- Dunas Nafud -->
   <div class="si">
-    <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=800&q=85" alt="Dunas Gran Nafud">
+    <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?w=800&q=85" alt="Gran Nafud dunas rojas">
     <div class="scap">Gran Nafud · Dunas rojas</div>
   </div>
 </div>
@@ -513,48 +508,48 @@ function switchDay(i) {
 <!-- ═══════════ DAYS CONT. ═══════════ -->
 <section class="days" style="padding-top:1rem">
 
-  <!-- DÍA 4 — Jubbah petroglifos real -->
+  <!-- DÍA 4 — Ha'il castillos -->
   <div class="day">
     <div class="di">
-      <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNFKr5rN81q23TbzOkuQraOr58CI1uBNPBvWDD6syOF42QX21rusHkD1zIws-p2yYHzgkjAZbk645S-rdp9Vl5qQ5OhiJIVdLZ4w7rvFYa5eqAm3f30ROIf0pM2TadhUD55W7zJnjGEP0bad77U=s4800-w800-h600" alt="Jubbah UNESCO petroglifos"
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Qishlah_Palace%2C_Ha%27il.jpg/800px-Qishlah_Palace%2C_Ha%27il.jpg" alt="Qishlah Palace Ha'il"
+           onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85'">
+      <div class="dnum">DÍA 04 · SÁB 21</div>
+    </div>
+    <div class="dt">
+      <div class="ddate">Sábado 21 · Buraydah → Ha'il → Jubbah</div>
+      <h3 class="dtitle">Ha'il.<br><em>Capital del norte.</em></h3>
+      <p class="dbody">2.5h hasta Ha'il. Parada en los castillos: Qishlah Palace (1940, 142 habitaciones de adobe) y A'arif Fort del s.XVII con vistas panorámicas. Luego 1.5h más hasta dormir en Jubbah.</p>
+      <div class="tags"><span class="tag">Qishlah Palace</span><span class="tag">A'arif Fort s.XVII</span><span class="tag">Dormir Jubbah</span></div>
+    </div>
+  </div>
+
+  <!-- DÍA 5 — Jubbah petroglifos -->
+  <div class="day">
+    <div class="di">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Petroglyphs_at_Jubbah_rock_art_site%2C_Saudi_Arabia_%282%29.jpg/800px-Petroglyphs_at_Jubbah_rock_art_site%2C_Saudi_Arabia_%282%29.jpg" alt="Jubbah petroglifos UNESCO"
            onerror="this.src='https://images.unsplash.com/photo-1578894381163-e72c17f2d45f?w=900&q=85'">
-      <div class="dnum">DÍA 04 · MAR 21</div>
+      <div class="dnum">DÍA 05 · DOM 22</div>
     </div>
     <div class="dt">
-      <div class="ddate">Viernes 21 · Excursión a Jubbah</div>
-      <h3 class="dtitle">Los petroglifos.<br><em>1h al norte.</em></h3>
-      <p class="dbody">Día entero con guía local. Centro de visitantes, 15.000 grabados en el Jabal Umm Sinman. Tarde en las dunas rojas del Gran Nafud al atardecer.</p>
-      <div class="tags"><span class="tag">UNESCO</span><span class="tag">Guía local</span><span class="tag">Nafud sunset</span><span class="tag">Gratuito</span></div>
+      <div class="ddate">Domingo 22 · Jubbah → Hafar Al-Batin</div>
+      <h3 class="dtitle">Los petroglifos.<br><em>9.000 a.C.</em></h3>
+      <p class="dbody">Mañana con guía local en el Jabal Umm Sinman: 15.000 grabados rupestres entre los más antiguos del mundo. Tarde: 7.5h de carretera hacia Hafar Al-Batin, parada obligada antes del último tramo.</p>
+      <div class="tags"><span class="tag">UNESCO · gratis</span><span class="tag">Guía local</span><span class="tag">Hafar noche</span><span class="tag">7.5h</span></div>
     </div>
   </div>
 
-  <!-- DÍA 5 — Jabal Aja real -->
+  <!-- DÍA 6 — vuelta a Jubail -->
   <div class="day">
     <div class="di">
-      <img src="https://lh3.googleusercontent.com/place-photos/AL8-SNHleSZhpVWfsv4JZ0Tthc1REtVHc26qL310-I_NdkPhLxepbCQszwDLMngzg7lB_DMCL5YVcxDJA_h8ifzwVyXOByapAoM-_S5LMLQvYNxzgZg5Puq_syUXSmEtKgwa-W6L4khki3v0OyMYNw=s4800-w800-h600" alt="Jabal Aja Ha'il naturaleza"
-           onerror="this.src='https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=900&q=85'">
-      <div class="dnum">DÍA 05 · MAR 22</div>
-    </div>
-    <div class="dt">
-      <div class="ddate">Sábado 22 · Ha'il naturaleza</div>
-      <h3 class="dtitle">Volcanes blancos<br><em>y montañas.</em></h3>
-      <p class="dbody">Harrat Bani Rashid: paisaje lunar de lava solidificada. Tarde en Jabal Aja, las montañas protegidas de Ha'il con flora y fauna única del corazón del desierto.</p>
-      <div class="tags"><span class="tag">Harrat volcanes</span><span class="tag">Jabal Aja</span><span class="tag">Senderismo</span></div>
-    </div>
-  </div>
-
-  <!-- DÍA 6 — vuelta carretera Najd -->
-  <div class="day">
-    <div class="di">
-      <img src="https://images.unsplash.com/photo-1602001645700-c4de797ef8db?w=900&q=85" alt="Carretera Najd vuelta"
+      <img src="https://images.unsplash.com/photo-1602001645700-c4de797ef8db?w=900&q=85" alt="Carretera vuelta desierto"
            onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=85'">
-      <div class="dnum">DÍA 06 · MAR 23</div>
+      <div class="dnum">DÍA 06 · LUN 23</div>
     </div>
     <div class="dt">
-      <div class="ddate">Domingo 23 · Ha'il → Jubail</div>
-      <h3 class="dtitle">La vuelta.<br><em>El único día largo.</em></h3>
-      <p class="dbody">Salida a las 7h. 7.5h atravesando el Najd de norte a sur. Parada en ruta para comer. Llegada a Jubail al atardecer.</p>
-      <div class="tags"><span class="tag">7.5h · único día largo</span><span class="tag">Salida 7h</span></div>
+      <div class="ddate">Lunes 23 · Hafar Al-Batin → Jubail</div>
+      <h3 class="dtitle">La vuelta.<br><em>4.5h y en casa.</em></h3>
+      <p class="dbody">El día más fácil del viaje. 4.5h tranquilas desde Hafar Al-Batin de vuelta a Jubail. Llegada a mediodía. El desierto queda atrás — hasta la próxima.</p>
+      <div class="tags"><span class="tag">4.5h · día corto</span><span class="tag">Llegada mediodía</span></div>
     </div>
   </div>
 
@@ -566,18 +561,18 @@ function switchDay(i) {
   <div class="notes">
     <div class="note">
       <div class="note-icon">🌙</div>
-      <h4>Ramadán</h4>
-      <p>Sitios arqueológicos y naturales abiertos de día. Restaurantes solo tras el iftar (~18:30h). Llevar siempre agua y snacks en el coche.</p>
+      <h4>Conducción</h4>
+      <p>El día más largo al volante es el domingo (7.5h Jubbah → Hafar). Llevar snacks, agua y música. Salir siempre antes de las 8h en los días de tramo largo.
     </div>
     <div class="note">
       <div class="note-icon">🧭</div>
-      <h4>Guía en Jubbah</h4>
-      <p>Contratar guía local in situ en el centro de visitantes. Son los únicos que conocen los paneles más espectaculares. Jubbah cierra fines de semana — confirmar antes.</p>
+      <h4>Jubbah — cuidado</h4>
+      <p>Confirmar apertura antes de ir. Cierra fines de semana según varias reseñas recientes. Contratar guía local en el centro de visitantes — son los únicos que conocen los mejores paneles.</p>
     </div>
     <div class="note">
-      <div class="note-icon">🏨</div>
-      <h4>Hoteles</h4>
-      <p>Ha'il: Hail Regency o Fal Hotel. Reservar con antelación — Ramadán genera mucho movimiento de viajeros internos saudíes.</p>
+      <div class="note-icon">🏕️</div>
+      <h4>Desierto overnight</h4>
+      <p>Dunes & Dates Desert Camp: reserva obligatoria con antelación. ~650 SAR/persona todo incluido. Jaima, cena beduina, camellos y stargazing.</p>
     </div>
   </div>
 </div>
@@ -585,7 +580,7 @@ function switchDay(i) {
 <!-- ═══════════ FOOTER ═══════════ -->
 <footer>
   <div class="footer-big">HA'IL</div>
-  <p>Road Trip · 18–24 Marzo 2026 · Jubail, Eastern Province · Saudi Arabia</p>
+  <p>Road Trip · 18–23 Marzo 2026 · Jubail → Riad → Buraydah → Ha'il → Jubbah → Hafar Al-Batin · Saudi Arabia</p>
 </footer>
 
 </body>
